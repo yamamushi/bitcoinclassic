@@ -112,5 +112,6 @@ share/BitcoindComparisonTool.jar
 !src/leveldb*/Makefile
 
 /doc/doxygen/
+.idea
 
 libbitcoinconsensus.pc

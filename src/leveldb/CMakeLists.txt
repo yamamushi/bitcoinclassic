@@ -1,0 +1,6 @@
+add_subdirectory(db)
+add_subdirectory(helpers)
+add_subdirectory(include)
+add_subdirectory(port)
+add_subdirectory(table)
+add_subdirectory(util)

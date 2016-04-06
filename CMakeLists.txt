@@ -47,6 +47,11 @@ message(STATUS "C++ link flags:  ${CMAKE_CXX_LINK_FLAGS}")
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
+set(Boost_USE_STATIC_LIBS OFF)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_COMPONENTS )
+find_package(Boost 1.53 REQUIRED ${Boost_COMPONENTS})
+
 #-----------------------------------------------------------------------------
 # Force out-of-source build
 
@@ -78,6 +83,10 @@ set(LIBRARY_OUTPUT_PATH  ${CMAKE_CURRENT_BINARY_DIR}/lib)
 
 
 SET(CMAKE_INCLUDE_CURRENT_DIR TRUE)
+
+include_directories(SYSTEM
+        ${PROJECT_SOURCE_DIR}/src/univalue/include/
+        )
 
 
 add_subdirectory(src)

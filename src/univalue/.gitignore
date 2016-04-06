@@ -30,3 +30,6 @@ test-suite.log
 
 .dirstamp
 .libs
+
+# CMake Build Directory
+build/

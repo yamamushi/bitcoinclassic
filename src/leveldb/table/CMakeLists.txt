@@ -1,0 +1,12 @@
+set(LEVELDB-CXX-SRC
+        ${CMAKE_CURRENT_SOURCE_DIR}/block.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/block_builder.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/filter_block.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/format.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/iterator.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/merger.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/table.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/table_builder.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/two_level_iterator.cc
+        PARENT_SCOPE
+        )

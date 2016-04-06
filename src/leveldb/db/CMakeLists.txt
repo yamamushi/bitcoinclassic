@@ -1,0 +1,18 @@
+set(LEVELDB-CXX-SRC
+        ${CMAKE_CURRENT_SOURCE_DIR}/builder.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/c.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/db_impl.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/db_iter.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/dbformat.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/dumpfile.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/filename.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/log_reader.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/log_writer.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/memtable.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/repair.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/table_cache.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/version_edit.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/version_set.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/write_batch.cc.cpp
+        PARENT_SCOPE
+        )

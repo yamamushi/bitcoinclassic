@@ -1,0 +1,9 @@
+set(BITCOIN-CXX-SOURCES
+        ${CMAKE_CURRENT_SOURCE_DIR}/hmac_sha256.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/hmac_sha512.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/ripemd160.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sha1.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sha256.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sha512.cpp
+        PARENT_SCOPE
+        )

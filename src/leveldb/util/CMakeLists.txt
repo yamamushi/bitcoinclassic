@@ -1,0 +1,18 @@
+set(LEVELDB-CXX-SRC
+        ${CMAKE_CURRENT_SOURCE_DIR}/arena.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/bloom.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/cache.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/coding.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/comparator.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/crc32c.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/env.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/env_posix.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/env_win.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/filter_policy.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/hash.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/histogram.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/logging.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/options.cc
+        ${CMAKE_CURRENT_SOURCE_DIR}/status.cc
+        PARENT_SCOPE
+        )

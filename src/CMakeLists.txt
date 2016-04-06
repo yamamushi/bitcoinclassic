@@ -16,3 +16,62 @@ add_subdirectory(univalue)
 add_subdirectory(wallet)
 add_subdirectory(zmq)
 
+set(BITCOIN-CXX-SOURCES
+        addrman.cpp
+        alert.cpp
+        amount.cpp
+        arith_uint256.cpp
+        base58.cpp
+        bitcoind.cpp
+        bloom.cpp
+        chain.cpp
+        chainparams.cpp
+        chainparamsbase.cpp
+        checkpoints.cpp
+        clientversion.cpp
+        coins.cpp
+        compressor.cpp
+        core_read.cpp
+        core_write.cpp
+        dbwrapper.cpp
+        hash.cpp
+        httprpc.cpp
+        httpserver.cpp
+        init.cpp
+        key.cpp
+        keystore.cpp
+        main.cpp
+        merkleblock.cpp
+        miner.cpp
+        net.cpp
+        netbase.cpp
+        noui.cpp
+        pow.cpp
+        protocol.cpp
+        pubkey.cpp
+        random.cpp
+        rest.cpp
+        rpcblockchain.cpp
+        rpcclient.cpp
+        rpcmining.cpp
+        rpcmisc.cpp
+        rpcnet.cpp
+        rpcprotocol.cpp
+        rpcrawtransaction.cpp
+        rpcserver.cpp
+        scheduler.cpp
+        sync.cpp
+        timedata.cpp
+        torcontrol.cpp
+        txdb.cpp
+        txmempool.cpp
+        uint256.cpp
+        util.cpp
+        utilmoneystr.cpp
+        utilstrencodings.cpp
+        utiltime.cpp
+        validationinterface.cpp
+        )
+
+
+add_executable(bitcoinclassic ${BITCOIN-CXX-SOURCES})

@@ -8,3 +8,8 @@ set(BITCOIN-CXX-SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/standard.cpp
         PARENT_SCOPE
         )
+
+set(LIBBITCOIN-SERVER-CXX-SOURCES
+        ${CMAKE_CURRENT_SOURCE_DIR}/sigcache.cpp
+        PARENT_SCOPE
+        )

@@ -31,7 +31,32 @@ SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib
         CACHE PATH "Single directory for all dynamic libraries on Unix.")
 
 #-----------------------------------------------------------------------------
-# Check which compiler to use
+# Check for C++11 Support
+
+if(${CMAKE_CXX_COMPILER_ID} MATCHES GNU)
+    INCLUDE(CheckCXXCompilerFlag)
+    CHECK_CXX_COMPILER_FLAG(-std=c++11 HAVE_STD11)
+    if(HAVE_STD11)
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+#        set(GCC_WARN_FLAGS "-Wnoexcept -Wstrict-null-sentinel -Wlogical-op -Wuseless-cast")
+    else()
+        message(FATAL_ERROR "No advanced standard C++ support (-std=c++11 not defined).")
+    endif()
+elseif(${CMAKE_CXX_COMPILER_ID} MATCHES Clang)
+    set(CMAKE_COMPILER_IS_CLANGXX 1)
+    INCLUDE(CheckCXXCompilerFlag)
+    CHECK_CXX_COMPILER_FLAG(-std=c++11 HAVE_STD11)
+    if(HAVE_STD11)
+        if(APPLE)
+            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -stdlib=libc++")
+            set(CMAKE_CXX_LINK_FLAGS "${CMAKE_CXX_LINK_FLAGS} -stdlib=libc++")
+        else()
+            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+        endif()
+    else()
+        message(FATAL_ERROR "No C++11 support for Clang version. Please upgrade Clang to a version supporting C++11.")
+    endif()
+endif()
 
 message(STATUS "C++ Compiler ID: ${CMAKE_CXX_COMPILER_ID}")
 message(STATUS "C++ Flags:       ${CMAKE_CXX_FLAGS}")
